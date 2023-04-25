@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Create blog</title>
+    <script defer src="createBlog.bundle.js"></script></head>
+    <body class="dark-theme">
+        <div class="mainHeader" style="justify-content: left; position: relative;">
+            <ul>
+                <li>
+                    <input id="lblBlogname" type="text" placeholder="Title">
+                </li>
+                <li>
+                    <input id="lblBlogUrltxt" type="text" placeholder="Thumbnail url">
+                </li>
+                <li>
+                    <button id="btnAddBlog" type="button" class="button buttonBlue" style="margin-right: 10px;">Add Blog</button>
+                </li>
+                <li>
+                    <button id="btnDeleteBlog" type="button" class="button buttonRed" style="margin-right: 10px;">Delete Blog</button>
+                </li>
+                <li>
+                    <button onclick="history.go(-1)" id="btnReturnBlog" type="button" class="button buttonOrange">Return</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="editbox">
+            <div class="editor-container">
+                <div class="editor-header">
+                    <h1 class="scaleHide">Editor</h1>
+                    <div class="nav-right" style="padding-right: 20px;">
+                        <button id="addHtmlFrame" class="socialMedia" data-title="Click to add html code">
+                            html</button>
+                        <button id="addImgFrame" class="socialMedia" data-title="Click to add image">
+                            image</button>
+                        <button id="addRefFrame" class="socialMedia" data-title="Click to add a reference">
+                            reference</button>
+                        <button id="addPointsFrame" class="socialMedia" data-title="Click to add bullet points">
+                            bullet</button>
+                        <button id="addSnippedFrame" class="socialMedia" data-title="Click to add code snipped">
+                            code</button>
+                        <button id="addHeadingFrame" class="socialMedia" data-title="Click to add code snipped">
+                            header</button>
+                    </div>
+                </div>
+                <textarea id="input" placeholder="Type something..."></textarea>
+            </div>
+            <div class="editor-container">
+                <div class="editor-header">
+                    <h1>Result</h1>
+                </div>
+                <div id="output" class="output"></div>
+            </div>
+        </div>
+        
+        <template id="codesnippet-template">
+            <codeSnip>
+                <div class="codeheader">
+                    <div class="nav-left" id="languageDiv">Unknown Language</div>
+                    <div>
+                        <button onclick="copyCodeSnippet(this.parentNode.parentNode.parentNode.querySelector('pre').querySelector('code').textContent, this.querySelector('img'), this)" class="socialMedia" style="padding:15px" data-title="copy code">
+                            <img class="imgIcon" src="icons/copy.svg">
+                        </button>
+                    </div>
+                </div>
+                <pre><code></code></pre>
+            </codeSnip>
+        </template>
+
+        <template id="reference-template">
+            <referenceSnip>
+                <p id="RefText">
+                    Example text
+                </p>
+            </referenceSnip>
+        </template>
+    </body>
+</html>
+
+
