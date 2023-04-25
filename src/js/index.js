@@ -486,7 +486,7 @@ async function InitBlogpostsPreview(){
         
         const link = document.createElement("a");
         link.classList.add('noDecoration');
-        link.href = "http://127.0.0.1:5501/dist/blog.html?blogid=" + blog.blogname;
+        link.href = "http://127.0.0.1:5501/docs/blog.html?blogid=" + blog.blogname;
         link.appendChild(card);
         preview_div.appendChild(link);
     }
