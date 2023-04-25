@@ -204,7 +204,7 @@ async function ShowOtherBlogsPreviews() {
       
       const link = document.createElement("a");
       link.classList.add('noDecoration');
-      link.href = "./docs/blog.html?blogid=" + blog.blogname;
+      link.href = "./blog.html?blogid=" + blog.blogname;
       link.appendChild(card);
       morePosts.appendChild(link);
     }
