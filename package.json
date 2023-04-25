@@ -1,0 +1,30 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.18.0",
+    "glob": "^9.3.2",
+    "highlight.js": "^11.7.0",
+    "js-cookie": "^3.0.1",
+    "jsdom": "^21.1.1"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.2",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1",
+    "webpack-shell-plugin-next": "^2.3.1",
+    "webpack-watch-files-plugin": "^1.2.1"
+  }
+}

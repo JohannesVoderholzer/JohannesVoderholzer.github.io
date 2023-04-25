@@ -1,0 +1,16 @@
+I have a simple language that allows me to write blogs in markup fashion. You have the following options:
+
+1) You can add images in the following way (FILL IN WITH REAL IMAGE WHEN USING!!!!): #I[href="https://some/example/picture", caption="A cool image", size="100%"]I#
+2) To add a header, you can use § some Header §, like in a markup file 
+3) To add a code snippet, use the same notation as in a markup file
+4) To add references, you can add something like this (FILL IN WITH REAL REFERENCES WHEN USING!!!!!!!!!!!): #[name='Example Reference', text='some text that uses the reference', authors='cool person 1 and cool person 2', link='https://de.wikipedia.org/wiki/Test', year='2023']#. 
+5) You can add bullet points like in a markup file, except that i use the following signs: 
+$ numbered point
+  ~ point 1
+  ~ point 2
+$ another numbered point
+~ point 2
+
+Now you task is to write a detailed blog with the following title: "Will AI destroy humanity someday?"
+
+Please note that you have to use my proposed notation for references when you want to reference something you found on the internet. Use at least 2 references and 1 image
