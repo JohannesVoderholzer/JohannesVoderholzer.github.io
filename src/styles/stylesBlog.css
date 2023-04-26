@@ -287,3 +287,7 @@ figcaption {
     color: var(--text-secondary);
     text-align: center;
 }
+
+pre {
+  white-space: pre-wrap;
+}
