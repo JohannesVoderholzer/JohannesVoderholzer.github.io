@@ -122,3 +122,53 @@ service cloud.firestore {
                   && request.resource.data.comments[request.resource.data.commentId].likes == resource.data.comments[request.resource.data.commentId].likes + 1
                   && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['comments', 'commentId']);
   }
+
+
+  IconUrl
+: 
+null
+date
+: 
+"Wed Apr 26 2023 18:47:22 GMT+0200 (Mitteleuropäische Sommerzeit)"
+"Wed Apr 26 2023 18:50:22 GMT+0200 (Mitteleuropäische Sommerzeit)"
+lastLiked
+: 
+""
+likes
+: 
+0
+text
+: 
+"test"
+userID
+: 
+"dCNrDzkhO7emkzFF9NzsslDQ8tP2"
+"dCNrDzkhO7emkzFF9NzsslDQ8tP2"
+username
+: 
+"invenis3@gmail.com"
+[[Prototype]]
+: 
+Object
+
+IconUrl
+: 
+null
+date
+: 
+
+lastLiked
+: 
+""
+likes
+: 
+0
+text
+: 
+"test"
+userID
+: 
+
+username
+: 
+"invenis3@gmail.com"
