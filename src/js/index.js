@@ -97,8 +97,8 @@ let mouse = {
 let gridSize = 25;
 let allowedDirections = [];
 let usedPositions = [];
-let numberOfParticles = 15;
-let maxNumParticles = 50;
+let numberOfParticles = 5;
+let maxNumParticles = 10;
 
 // helper functions: 
 function shuffle(array) {
@@ -388,11 +388,6 @@ function animate(){
     }
     requestAnimationFrame(animate);
 }
-
-window.addEventListener('scroll', function(){
-    let value = window.scrollY;
-    canvas.style.transform = 'translate3d(0, ' + value * 0.5 + 'px, 0)';
-})
 
 canvas.addEventListener('mousemove',
     function(event){

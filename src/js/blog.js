@@ -108,7 +108,7 @@ else{
   blogname = blogname.replace(/%20/g, " ");
 }
 
-import hljs from 'highlight.js';
+
 import { getAllBlogs, SendPersonalMessage } from "./sendPersonalMessage";
 
 document.getElementById("btnSendPersonalMessage").addEventListener("click", (event) => {SendPersonalMessage("bug")});
@@ -493,6 +493,12 @@ async function BlogLikeClick(event){
   }
   isUpdating = false;
 }
+function highlightCode() {
+  require.ensure(['highlight.js'], function(require) {
+    const hljs = require('highlight.js');
+    hljs.highlightAll();
+  });
+}
 
 function AfterLoading(){
   // Add CopyCode buttons functions:
@@ -509,7 +515,8 @@ function AfterLoading(){
       copyCodeSnippet(codeElement.textContent, useElement, button);
     });
   });
-  hljs.highlightAll();
+  
+  highlightCode();
 
   // Like button for main blog:
   const blogLikeButtons = document.querySelectorAll('.BlogReactionButton');
@@ -599,7 +606,7 @@ export function LoadComments(comments){
       if (comment.lastLiked != undefined && comment.lastLiked == GetUser().uid){
         commentLay.querySelector('.likeButton').classList.add("likedHeart");
       }
-      if (comment.commentKey.split("_")[0] == GetUser().uid){
+      if (comment.commentKey.split("_")[0] == GetUser().uid || GetUser().uid == ADMIN){
         const trashIcon = commentLay.querySelector('#trash');
         trashIcon.style.display = "block";
         trashIcon.addEventListener("click", async (event) => {

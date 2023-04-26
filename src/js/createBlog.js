@@ -8,7 +8,6 @@ import { deleteDoc, deleteField, setDoc, doc, updateDoc } from "firebase/firesto
 import hljs from "highlight.js";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 console.log("loaded CreateBlog");
-
 var mainUser = null;
 const auth = getAuth(firebaseApp);
 const monitorAuthState = async () => {

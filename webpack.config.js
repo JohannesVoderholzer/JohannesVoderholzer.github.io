@@ -19,9 +19,10 @@ const generateHtmlPlugins = (templateDir, entryPoint) => {
 
 module.exports = {
     mode: 'production',
+    // devtool: 'eval-source-map',
     output: {
       path: path.resolve(__dirname, 'docs'),
-      filename: '[name].[contenthash].bundle.js'
+      filename: '[name].bundle.js'
     },
 
     entry: {

@@ -257,6 +257,7 @@ reference {
 .commentreplies{
     background-color: rgba(0, 0, 0, 0.2);
     padding-left: 35px;
+    max-width: 600px;
     border-left: 3px solid var(--code-background-sec);
     border-radius: 5px;
 }
