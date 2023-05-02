@@ -250,7 +250,15 @@ reference {
 }
 
 .skeleton {
-    min-height: 500px;
+    min-width: 20px;
+    animation: blink 0.65s infinite alternate;
+    border-radius: 5px;
+}
+
+.skeleton-text {
+    height: 20px;
+    min-width: 80px;
+    border-radius: .4rem;
     animation: blink 0.65s infinite alternate;
 }
 
