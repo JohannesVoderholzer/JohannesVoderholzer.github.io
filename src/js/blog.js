@@ -102,7 +102,7 @@ function getParameterByName(name, url = window.location.href) {
 
 export var blogname = getParameterByName("blogid");
 if (blogname == null){
-    blogname = "standart";
+    blogname = "How i created my personal website";
 }
 else{
   blogname = blogname.replace(/%20/g, " ");
@@ -213,6 +213,15 @@ async function ShowOtherBlogsPreviews() {
   }
 }
 
+function RemoveSkeleton(element){
+  try {
+    const skelet = element.querySelector(".skeleton-text");
+    skelet.remove();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export function LoadBlog(){
   ShowOtherBlogsPreviews();
   reactions = [0, 0, 0, 0];
@@ -239,12 +248,17 @@ export function LoadBlog(){
   
     // set time
     const time = doc.querySelector('#creationDate').innerHTML;
-    let time_el = document.querySelector('#timediff');
-    time_el.innerHTML = timeDifference(new Date(time)) + " ago";
+    const time_el = document.querySelector('#timediff');
+    const byName = document.querySelector('#authorName');
     const mainTitle = document.querySelector('#blogTitle');
+    
+    RemoveSkeleton(byName);
+    RemoveSkeleton(time_el);
+    RemoveSkeleton(mainTitle);
+
     mainTitle.innerHTML = blogname;
+    time_el.innerHTML = timeDifference(new Date(time)) + " ago";
     if (blogEl != null){
-      const byName = document.querySelector('#authorName');
       mainTitle.innerHTML = blogEl.blogname;
       byName.innerHTML = "by " + blogEl.userName;
       const blogLikes = document.querySelector('#bloglikeCount');
@@ -263,6 +277,9 @@ export function LoadBlog(){
       }
       blogComments = FilterComments(blogComments);
       LoadComments(blogComments);
+    }
+    else{
+      byName.innerHTML = "by Johannes Voderholzer";
     }
     AfterLoading();
   });

@@ -718,3 +718,13 @@ a.noDecoration {
     margin: 0;
     padding-bottom: 10px;
 }
+
+.cardText{
+    font-weight: 600; 
+    font-size: 14px; 
+    color: var(--text-primary);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

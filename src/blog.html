@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>blog</title>
+    <title>Johannes Voderholzer blog</title>
   </head>
   <body class="dark-theme" style="display: none;">
     <div id="error" class="error">
@@ -41,12 +41,12 @@
         </header>
         <div class="center-div-inner" style="padding-top: 100px">
           <div style=" color: var(--text-main); max-width: 1000px;" class="blog-container">
-            <h1 id="blogTitle" style="font-size: 40; color: var(--headercolor);">Test blog</h1>
+            <h1 id="blogTitle" style="font-size: 30; color: var(--headercolor);"><div class="skeleton-text"></div></h1>
             <div class="coolheader" style="margin-bottom: 13px; font-size: 20; font-weight: 300;color: var(--headerColor-secondary);">
-              <p> 
-                <span id="authorName" style="font-weight: 700; font-size: 20px; padding-right: 4px; display: inline-block;">Johannes Voderholzer</span>
-                <span id="timediff" style="font-weight: 600; font-size: 14px; color: var(--text-secondary); display: inline-block;">7 month ago</span>
-              </p>
+              <div> 
+                <span id="authorName" style="font-weight: 700; font-size: 20px; padding-right: 4px; display: inline-block;"><div class="skeleton-text"></div></span>
+                <span id="timediff" style="font-weight: 600; font-size: 14px; color: var(--text-secondary); display: inline-block;"><div class="skeleton-text"></div></span>
+              </div>
               <div class="nav-left">
                 <div class="nav-left purpleHover BlogReactionButton" data-reaction="1">
                   <svg style="height:24px; width:18px; fill:inherit"><use href="./icons/icons.svg#heart" width="17"></use></svg>
@@ -62,7 +62,7 @@
                 </div>
               </div>
             </div>
-            <div id="blogtext" class="skeleton"></div>
+            <div id="blogtext" class="skeleton" style="min-height: 500px"></div>
             <div style="padding-top: 13px; margin-top: 13px; border-top: 2px solid var(--code-background-sec);">
               <div id="addCommentContainer" style="display: none; max-width: 350px; ">
                 <textarea id="writeCommentText" style="height: 80px"></textarea>
@@ -212,7 +212,7 @@
           <img class="backgroundIMG" src="images/chip.png">
         </div>
         <div class="content" style="color: var(--text-secondary);">
-          <d style="font-weight: 600; font-size: 14px; color: var(--text-primary);"> Machine learning 101 </d>
+          <d class="cardText"> Machine learning 101 </d>
           <div class="flex-div" style="height: 15px;">
             <div class="nav-left" style="padding-top: 10px;">
               <img id="UserImg" class="profileImg" src="images/userIcon.png" width="32" height="32" alt="Italian Trulli">
